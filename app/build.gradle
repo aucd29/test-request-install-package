@@ -20,6 +20,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -33,4 +37,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation "com.squareup.okhttp3:okhttp:$okhttp"
+    implementation "android.arch.lifecycle:extensions:$arch"
+    kapt "android.arch.lifecycle:compiler:$arch"
 }
